@@ -68,20 +68,33 @@ var finalPath = `M 10 100 Q 500 100 990 100`;
 
 var string = document.querySelector("#string");
 
-string.addEventListener("mousemove", (event)=>{
-    initialPath = `M 10 100 Q ${event.x} ${event.y} 990 100`;
+if(string) {
+    string.addEventListener("mousemove", (event) => {
+        initialPath = `M 10 100 Q ${event.x} ${event.y} 990 100`;
 
-    gsap.to("svg path", {
-        attr: {d: initialPath},
-        duration: 0.3,
-        ease: "power3.out"
+        gsap.to("svg path", {
+            attr: {d: initialPath},
+            duration: 0.3,
+            ease: "power3.out"
+        })
     })
-})
 
-string.addEventListener("mouseleave", () => {
-    gsap.to("svg path", {
-        attr: {d: finalPath},
-        duration: 0.3,
-        ease: "bounce.out"
+    string.addEventListener("mouseleave", () => {
+        gsap.to("svg path", {
+            attr: {d: finalPath},
+            duration: 0.3,
+            ease: "bounce.out"
+        })
     })
+}
+
+// GSAP for custom cursor animation
+var body = document.querySelector("body");
+var cursor = document.querySelector("#cursor");
+
+body.addEventListener("mousemove", (event) => {
+    gsap.to(cursor, {
+       x: event.x,
+       y: event.y,
+    });
 })
