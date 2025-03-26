@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    color: white;
+    /*color: white;*/
 }
 
 body{
@@ -24,7 +24,7 @@ nav{
     justify-content: space-between;
     padding: 30px 50px;
     align-items: center;
-    color: white;
+    /*color: white;*/
 }
 
 nav #links{
@@ -103,3 +103,57 @@ nav #links{
     position: fixed;
 }
 
+/* GSAP - Timeline animation */
+#container-timeline{
+    height: 100%;
+    width: 100%;
+    /*background-color: lightblue;*/
+    background-image: url(https://img.freepik.com/free-photo/cloudy-blue-sky_1122-445.jpg?t=st=1742816049~exp=1742819649~hmac=1ce52481ee9af86e7a39fefb5b60da17d230d65b491ebb6e628cbce4ac15acc3&w=996);
+    background-size: cover;
+    background-position: center;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+
+}
+
+#nav h2{
+    font-size: 30px;
+}
+
+#nav i{
+    font-size: 30px;
+    font-width: 800;
+}
+
+#menu{
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.42);
+    top: 0;
+    right: -40%;
+    backdrop-filter: blur(10px);
+    padding: 150px 50px;
+}
+
+#menu h4{
+    font-size: 50px;
+    font-width: 500;
+    margin-bottom: 5px;
+}
+
+#menu i{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 25px;
+}

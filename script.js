@@ -2,14 +2,14 @@
 // GSAP for basic page
 const tl = gsap.timeline();
 
-tl.from("h2", {
+tl.from("nav h2", {
     y: -30,
     opacity: 0,
     duration: 1,
     delay: 0.5
 });
 
-tl.from("h4", {
+tl.from("#links h4", {
     y: -30,
     opacity: 0,
     duration: 1,
@@ -97,4 +97,33 @@ body.addEventListener("mousemove", (event) => {
        x: event.x,
        y: event.y,
     });
+})
+
+// GSAP for timeline animation
+var nav = document.querySelector("#nav i");
+var close = document.querySelector("#menu i");
+
+tl.to("#menu", {
+    right: 0,
+    duration: 0.71
+})
+
+tl.from("#menu h4", {
+    x:150,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2
+})
+
+tl.from("#menu i", {
+    opacity: 0
+})
+
+tl.pause()
+nav.addEventListener("click", () => {
+    tl.play();
+})
+
+close.addEventListener("click", () => {
+    tl.reverse();
 })
