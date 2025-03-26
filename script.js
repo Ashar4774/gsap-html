@@ -120,10 +120,55 @@ tl.from("#menu i", {
 })
 
 tl.pause()
-nav.addEventListener("click", () => {
-    tl.play();
-})
 
-close.addEventListener("click", () => {
-    tl.reverse();
+if(nav) {
+    nav.addEventListener("click", () => {
+        tl.play();
+    })
+}
+
+if(close) {
+    close.addEventListener("click", () => {
+        tl.reverse();
+    })
+}
+
+// GSAP for text animation
+
+function splitText(){
+    var h1_animate = document.querySelector("#h1-animate");
+    var h1_animate_text = h1_animate.textContent;
+
+    var h1_animate_split = h1_animate_text.split("");
+    var h1_combine = "";
+
+    var h1_len = Math.floor(h1_animate_split.length / 2);
+    console.log(h1_len)
+    h1_animate_split.forEach((value, index)=>{
+        if(index < h1_len ){
+            h1_combine += `<span class="firstHalf">${value}</span>`;
+        } else {
+            h1_combine += `<span class="secondHalf">${value}</span>`;
+        }
+    });
+
+    h1_animate.innerHTML = h1_combine;
+}
+
+splitText();
+
+gsap.from("#h1-animate .firstHalf", {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    delay: 0.5,
+    stagger: 0.2,
+});
+
+gsap.from("#h1-animate .secondHalf", {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    delay: 0.5,
+    stagger: -0.2
 })
