@@ -1,0 +1,121 @@
+@font-face {
+    font-family: china;
+    src: url(./fonts/3856NeueMachina.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+    /*background-color: bisque;*/
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+}
+
+nav .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+nav h1{
+    font-size: 30px;
+}
+
+nav h1 i{
+    display: inline-block;
+    rotate: 45deg;
+}
+
+nav .menu a{
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+nav .menu button{
+    font-size: 15px;
+    font-width: 600;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 2px solid #111111;
+    background-color: transparent;
+}
+
+.hero {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    padding: 70px 100px;
+}
+
+.hero .half1{
+    height: 100%;
+    width: 44%;
+}
+
+.hero .half1 h1{
+    line-height: 110px;
+    font-size: 110px;
+    font-weight: 600;
+    font-family: china;
+}
+
+.hero .half1 p {
+    font-size: 30px;
+    width: 95%;
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.hero .half1 button{
+    background-color: #111111;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.hero .half2{
+    height: 100%;
+    width: 56%;
+    position: relative;
+}
+
+.hero .half2 img{
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.header .header-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+
+.header .header-bottom img{
+    height: 60px;
+}

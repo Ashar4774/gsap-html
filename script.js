@@ -172,3 +172,27 @@ gsap.from("#h1-animate .secondHalf", {
     delay: 0.5,
     stagger: -0.2
 })
+
+gsap.to("#body-text-animate #section2 h4", {
+    transform: "translateX(-150%)",
+    scrollTrigger: {
+        trigger: "#body-text-animate #section2",
+        scroll: "body",
+        start: "top 0%",
+        end: "top -100%",
+        scrub: true,
+        pin: true
+    }
+})
+// gsap.to("#sec4 h1", {
+//     transform: "translateX(-150%)",
+//     scrollTrigger: {
+//         trigger: "#sec4",
+//         scroll: "body",
+//         markers: true,
+//         start: "top 0%",
+//         end: "top -100%",
+//         scrub: true,
+//         pin: true
+//     }
+// })

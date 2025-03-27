@@ -159,9 +159,36 @@ nav #links{
 }
 /* GSAP - Text Animation */
 #body-text-animate{
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+#body-text-animate section{
+    height: 100%;
+    width: 100%;
+
+    /*flex-direction: row;*/
+}
+
+#body-text-animate #section1{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: crimson;
+}
+
+#body-text-animate #section2{
+    background-color: lightgreen;
+}
+
+#body-text-animate #section2 h4{
+    color: white;
+    font-size: 20vw;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    /*font-weight: 800;*/
 }
 
 #body-text-animate h1{
