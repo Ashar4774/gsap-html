@@ -17,7 +17,7 @@ body{
 }
 
 section{
-    height: 100%;
+    /*height: 100%;*/
     width: 100%;
     /*background-color: bisque;*/
 }
@@ -105,8 +105,8 @@ nav .menu button{
 
 .hero .half2 img{
     height: 100%;
-    position: absolute;
-    right: 0;
+    /*position: absolute;*/
+    /*right: 0;*/
 }
 
 .header .header-bottom{
@@ -118,4 +118,53 @@ nav .menu button{
 
 .header .header-bottom img{
     height: 60px;
+}
+
+.section2 .services{
+    padding: 40px 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.section2 .services h3{
+    background-color: #B9FF66;
+    padding: 8px 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: china;
+}
+
+.section2 .services p{
+    font-size: 20px;
+    width: 40%;
+    font-weight: 500;
+
+}
+
+.container{
+    height: 85%;
+    width: 100%;
+    padding: 40px 120px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container .card{
+    width: 48%;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 40px;
+    flex-shrink: 0;
+    box-shadow: 0 7px black;
+}
+
+.container .card.card-dark{
+    background-color: #111111;
+    /*box-shadow: unset;*/
 }
